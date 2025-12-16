@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+    int score;
+    printf("score: ");
+    scanf("%d", &score);
+
+    if (score > 100 || score < 0) {
+        printf("error score\n");
+    } 
+    else if (score >= 80) {
+        printf("เกรด: A\n");
+    } 
+    else if (score >= 72) {
+        printf("เกรด: B\n");
+    } 
+    else if (score >= 68) {
+        int missing = 72 - score;
+        printf("เกรด: C\n");
+        printf("ขาดอีก % d คะแนนจะได้ B\n", missing);
+    } 
+    else if (score >= 60) {
+        printf("เกรด: D\n");
+    } 
+    else {
+        printf("เกรด: F\n");
+    }
+
+    return 0;
+}
